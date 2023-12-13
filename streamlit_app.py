@@ -55,21 +55,7 @@ def get_fruit_load_list():
 #Add a button to load the fruit
 if streamlit.button('Get Fruit Load List'):
        my_data_rows = get_fruit_load_list()
-#   my_cnx.close() 
     streamlit.dataframe(my_data_rows)
-#streamlit.stop()
-
-except URLError as e:
-  streamlit.error()
-
-#take the json version of the response and normalize it 
-#output it to the screen as table
-#don't run anything past here while we troubleshoot
-
-
-#import snowflake.connector
-#my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
-#streamlit.text("Hello from Snowflake:")
 
 #Allow the end user to add a fruit to the list
 def insert_row_snowflake(new_fruit):
